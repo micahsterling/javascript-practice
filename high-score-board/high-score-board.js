@@ -45,7 +45,8 @@ export function removePlayer(scoreBoard, player) {
  * @returns {Record<string, number>} updated score board
  */
 export function updateScore(scoreBoard, player, points) {
-  throw new Error('Please implement the addToScore function');
+  scoreBoard[player] += points;
+  return scoreBoard;
 }
 
 /**
@@ -55,7 +56,10 @@ export function updateScore(scoreBoard, player, points) {
  * @returns {Record<string, number>} updated score board
  */
 export function applyMondayBonus(scoreBoard) {
-  throw new Error('Please implement the applyMondayBonus function');
+  for (let player in scoreBoard) {
+    scoreBoard[player] += 100;
+    }
+    return scoreBoard
 }
 
 /**
