@@ -8,7 +8,15 @@
  * @returns {number} sum of the two arrays
  */
 export function twoSum(array1, array2) {
-  throw new Error('Implement the twoSum function');
+  let first = ""
+  let second = ""
+  for (let i=0; i < array1.length; i++) {
+    first += array1[i];
+  } 
+  for (let i=0; i < array2.length; i++) {
+    second += array2[i];
+  } 
+  return parseInt(first) + parseInt(second)
 }
 
 /**
