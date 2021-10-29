@@ -26,7 +26,16 @@ export function twoSum(array1, array2) {
  * @returns {boolean}  whether the number is a palindrome or not
  */
 export function luckyNumber(value) {
-  throw new Error('Implement the luckyNumber function');
+  let string = value.toString()
+  let reverse = ""
+    for (let i=string.length -1; i >= 0; i--) {
+    reverse += string[i];
+  }
+  if (string === reverse ) {
+    return true
+  } else {
+    return false
+  }
 }
 
 /**
