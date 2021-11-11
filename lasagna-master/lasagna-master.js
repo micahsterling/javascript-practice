@@ -16,3 +16,16 @@ export function preparationTime (layers, averageTime) {
     return layers.length * 2
   }
 }
+
+export function quantities (layers) {
+  let measurements = {noodles: 0, sauce: 0}
+for (let i = 0; i < layers.length; i++) {
+  if (layers[i] == 'noodles') {
+    measurements.noodles += 50
+  }
+  if (layers[i] == 'sauce') {
+     measurements.sauce += 0.2
+  }
+} 
+    return measurements
+}
