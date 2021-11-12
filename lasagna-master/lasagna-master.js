@@ -33,3 +33,9 @@ for (let i = 0; i < layers.length; i++) {
 export function addSecretIngredient (friendsList, myList) {
   myList.push(friendsList[friendsList.length - 1])
 }  
+
+export function scaleRecipe (recipe, portions) {
+  let mod = Object.assign({}, recipe);
+  Object.keys(mod).forEach(key => { mod[key] = mod[key] * portions/2 });
+  return mod
+}
