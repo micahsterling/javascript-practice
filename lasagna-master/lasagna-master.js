@@ -29,3 +29,7 @@ for (let i = 0; i < layers.length; i++) {
 } 
     return measurements
 }
+
+export function addSecretIngredient (friendsList, myList) {
+  myList.push(friendsList[friendsList.length - 1])
+}  
