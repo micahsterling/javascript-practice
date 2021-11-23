@@ -15,7 +15,16 @@
  *  translated coordinate pair in the form [x, y]
  */
 export function translate2d(dx, dy) {
-  throw new Error('Implement the translate2d function');
+  console.log("first",dx,dy);
+  return function translator(array) {
+    let holder = []
+    for (let i = 0; i < array.length; i++) {
+      console.log("array",array[i])
+    }
+    holder.push(dx,dy)
+    return holder 
+ }
+      holder = []
 }
 
 /**
