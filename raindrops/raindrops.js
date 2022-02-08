@@ -4,6 +4,16 @@
 //
 
 export const convert = (rain) => {
+  if (rain % 3 == 0 && rain % 5 == 0 && rain % 7 == 0) {
+    return "PlingPlangPlong"
+  } else if (rain % 3 == 0 && rain % 5 == 0) {
+    return "PlingPlang"
+  } else if (rain % 3 == 0 && rain % 7 == 0) {
+    return "PlingPlong"
+  } else if (rain % 5 == 0 && rain % 7 == 0) {
+    return "PlangPlong"
+  }
+  
   if (rain % 3 == 0) {
     return "Pling"
   } else if (rain % 5 == 0) {
