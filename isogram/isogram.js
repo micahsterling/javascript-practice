@@ -5,13 +5,12 @@
 
 export const isIsogram = (string) => {
   let check = new Set()
-  console.log(check)
   for (let i = 0; i < string.length; i++) {
-    if (check == string[i]) {
-    check.add(string[i])
-    } else {
-      return false 
+    if ((/[A-Za-z]/).test(string[i]) && !check.has(string[i].toLowerCase())) {
+    check.add(string[i].toLowerCase())
+    } else if (check.has(string[i].toLowerCase())) {
+      return false
     }
   }
-  console.log(check)
+  return true
 };
