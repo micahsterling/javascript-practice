@@ -3,6 +3,11 @@
 // convenience to get you started writing code faster.
 //
 
-export const findAnagrams = () => {
-  throw new Error('Remove this statement and implement this function');
+export const findAnagrams = (word,list) => {
+  console.log(word,list)
+  let set = new Set(word) 
+  let output = []
+  list.forEach(letter => {
+    console.log("letter",letter)
+  });
 };
