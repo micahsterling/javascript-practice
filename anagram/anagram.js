@@ -9,5 +9,13 @@ export const findAnagrams = (word,list) => {
   let output = []
   list.forEach(letter => {
     console.log("letter",letter)
+    for (let i=0;i<letter.length;i++) {
+      console.log("list 2",letter[i])
+      if (set.has(letter[i])) {
+        console.log("true")
+      } else {
+        console.log("false")
+      } 
+   }
   });
 };
