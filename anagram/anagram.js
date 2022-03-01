@@ -24,6 +24,12 @@ export const findAnagrams = (target,list) => {
       } 
     }
   console.log("output",output)
+    if (check.has(false)) {
+      
+    } else {
+        output.push(list[i])
+        console.log("output 1",output)
+    }
     console.log("check",check)
   }
 };
