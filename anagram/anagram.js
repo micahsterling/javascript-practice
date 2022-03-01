@@ -3,19 +3,28 @@
 // convenience to get you started writing code faster.
 //
 
-export const findAnagrams = (word,list) => {
-  console.log(word,list)
-  let set = new Set(word) 
+export const findAnagrams = (target,list) => {
+  console.log(target,list)
+  let set = new Set(target) 
   let output = []
-  list.forEach(letter => {
-    console.log("letter",letter)
-    for (let i=0;i<letter.length;i++) {
-      console.log("list 2",letter[i])
-      if (set.has(letter[i])) {
-        console.log("true")
+  for (let i=0;i<list.length;i++) {
+  let check = new Set()
+    console.log("list 1",list[i])
+    if (list[i] === target) {
+      check.add(false)
+    }
+    for (let j=0;j<list[i].length;j++) {
+       // console.log("list 2",list[i][j])
+      if (set.has(list[i][j])) {
+        // console.log("true")
+        check.add(true)
       } else {
-        console.log("false")
+        // console.log("false")
+        check.add(false)
       } 
-   }
-  });
+    }
+  console.log("output",output)
+    console.log("check",check)
+  }
 };
+
