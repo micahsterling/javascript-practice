@@ -13,22 +13,23 @@ export const findAnagrams = (target,list) => {
     if (list[i].toLowerCase() === target.toLowerCase()) {
       check.add(false)
     }
+    let count = 0
     for (let j=0;j<list[i].length;j++) {
        // console.log("list 2",list[i][j])
       if (set.has(list[i][j].toLowerCase())) {
         // console.log("true")
         check.add(true)
+        count += 1
       } else {
         // console.log("false")
         check.add(false)
       } 
     }
-    console.log("output",output)
-    if (!check.has(false)) {
-        output.push(list[i])
-        console.log("output 1",output)
+    if (!check.has(false) && count == target.length) {
+      output.push(list[i])
     } 
     console.log("check",check)
+    console.log("output",output)
   }
   return output
 };
