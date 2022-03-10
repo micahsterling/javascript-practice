@@ -4,7 +4,7 @@
 //
 
 export const rows = (numRows) => {
- console.log(numRows)
+  let result = []
   for (let i=0; i< numRows; i++) {
     let row = [1,1]
     if (i == 0) {
@@ -13,6 +13,10 @@ export const rows = (numRows) => {
     if (i == 1) {
     row = [1,1]
     } 
+    for (let j=1; j< i; j++) {
+      row.splice(j,0,result[i-1][j-1] + result[i-1][j])
+    }
+  result.push(row)
   }
 };
 
