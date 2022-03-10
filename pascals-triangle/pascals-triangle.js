@@ -5,9 +5,14 @@
 
 export const rows = (numRows) => {
  console.log(numRows)
- for (let i=0; i< numRows; i++) {
-  let row = [1,1]
-
+  for (let i=0; i< numRows; i++) {
+    let row = [1,1]
+    if (i == 0) {
+      row = [1]
+    }
+    if (i == 1) {
+    row = [1,1]
+    } 
   }
 };
 
