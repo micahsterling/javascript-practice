@@ -4,5 +4,11 @@
 //
 
 export const countWords = () => {
-  throw new Error('Remove this statement and implement this function');
+  console.log(phrase);
+  let words = {}
+  let split = phrase.split(' ')
+  console.log(split)
+  for (let i = 0; i < split.length; i++) {
+    console.log("split",split[i]);
+  };
 };
