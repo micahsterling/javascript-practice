@@ -3,22 +3,19 @@
 // convenience to get you started writing code faster.
 //
 
-export const countWords = () => {
-  console.log(phrase);
+export const countWords = (phrase) => {
   phrase = phrase.replace(/[&\/\\#+()$~%.":*?<>{}!@^]/g, '');
-   console.log("new",phrase);
-   let words = {}
-    let split = phrase.toLowerCase().split(/[\s,]+/)
-  console.log(split)
+  let words = {}
+  let split = phrase.toLowerCase().split(/[\s,]+/)
   for (let i = 0; i < split.length; i++) {
-  console.log("split",split[i]);
-    if (words.hasOwnProperty(split[i])) {
+    if (split[i] == '') {
+      console.log("skip")
+    } else if (words.hasOwnProperty(split[i])) {
       words[split[i]] += 1
     } else {
-      words[split[i]] = 1
+      words[split[i].replace(/'([^']+(?='))'/g, '$1')] = 1
     }
-    
   }
-  console.log(words)
   return words
 };
+
