@@ -13,8 +13,9 @@
  * @returns {string} template string combining both parameters
  */
 
-export function buildSign(occasion, name) {
-  throw new Error('Implement the buildSign function');
+ export function buildSign(occasion, name) {
+  let sign = `Happy ${occasion} ${name}!`;
+  return sign
 }
 
 /**
