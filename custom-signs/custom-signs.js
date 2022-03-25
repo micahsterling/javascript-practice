@@ -26,8 +26,12 @@
  * @returns {string} template string based on age
  */
 
-export function buildBirthdaySign(age) {
-  throw new Error('Implement the buildBirthdaySign function');
+ export function buildBirthdaySign(age) {
+  let blank = "young" 
+  if (age >= 50) {
+    blank = "mature"
+  } 
+  return `Happy Birthday! What a ${blank} fellow you are.`
 }
 
 /**
