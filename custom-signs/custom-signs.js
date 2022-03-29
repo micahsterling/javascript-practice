@@ -44,7 +44,9 @@
  */
 
 export function graduationFor(name, year) {
-  throw new Error('Implement the graduationForm function');
+  let graduation = `Congratulations ${name}!
+  Class of ${year}`
+    return graduation;
 }
 
 /**
