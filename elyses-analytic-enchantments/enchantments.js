@@ -62,7 +62,8 @@ export function doesStackIncludeOddCard(stack) {
  * @returns {number} the first odd value
  */
 export function getFirstOddCard(stack) {
-  throw new Error('Implement the getFirstOddCard function');
+  let oddCard = stack.find((num) => num % 2 !==0);
+  return oddCard
 }
 
 /**
