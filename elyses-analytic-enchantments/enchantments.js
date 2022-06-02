@@ -13,7 +13,8 @@
  * @returns {number} position of the card in the stack
  */
 export function getCardPosition(stack, card) {
-  throw new Error('Implement the getCardPosition function');
+  let position = stack.findIndex((num) => num === card)
+  return position
 }
 
 /**
